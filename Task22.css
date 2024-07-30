@@ -1,0 +1,35 @@
+#div-1{
+    background-color: blue;
+}
+#div-2{
+    background-color: orange;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    /* left: 30px; */
+}
+#div-3{
+    background-color: brown;
+}
+div{
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 75px;
+    color: white;
+    font-size: 24px;
+}
+/* #container{
+    background-color: red;
+    width: 200px;
+    height: 150px;
+    position: relative;
+} */
+.sticky{
+    background-color: rgb(62, 62, 65);
+}
+body{
+    height: 500px;
+}
