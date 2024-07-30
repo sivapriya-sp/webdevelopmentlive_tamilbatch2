@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html layout</title>
+    <!-- 1em*=16px,1rem=16px,100%=16px -->
+    <style>
+        div.container{
+            width: 100%;
+            border: 1px solid gray;
+        }
+        header,footer{
+            padding: 1em;
+            color: rgb(255,255,255);
+            background-color: #b460b4;
+            clear: left;
+            text-align: center;
+        }
+        nav{
+            float: left;
+            max-width: 160px;
+            margin: 0;
+            padding: 1em;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul a{
+            text-decoration: none;
+        }
+        article{
+            margin-left:170px;
+            border-left: 1px solid grey;
+            padding: 1em;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>html layout</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2>Layout</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam soluta esse, illum quasi vero aliquid
+                repellendus natus magnam optio
+                doloremque accusamus obcaecati cupiditate fuga animi consequuntur sed consectetur porro facere.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis illum minus debitis laboriosam aperiam
+                perferendis adipisci earum voluptas cum necessitatibus nesciunt deleniti
+                repudiandae praesentium repellat dolorem, labore tempore aliquid maxime.</p>
+        </article>
+        <footer>Copyright@xyz</footer>
+    </div>
+</body>
+
+</html>

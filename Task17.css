@@ -1,0 +1,16 @@
+#customer-form{
+    padding: 20px;
+    border: 1px solild #6266f1;
+    background-color: burlywood;
+}
+#customer-form button{
+    padding: 10px;
+    border: 0;
+    color: white;
+    background-color: burlywood;
+    border-radius: 5px;
+}
+#customer-form input[type="text"]{
+    width: 100%;
+    max-width: 250px;
+}

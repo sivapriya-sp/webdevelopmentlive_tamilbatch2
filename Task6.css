@@ -1,0 +1,13 @@
+.card {
+    border: 1px solid green;
+    border-radius: 3px;
+    padding-left: 7%;
+}
+
+::placeholder {
+    color: coral;
+}
+
+.container {
+    padding: 10px;
+}

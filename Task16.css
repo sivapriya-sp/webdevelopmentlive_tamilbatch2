@@ -1,0 +1,35 @@
+.btn-base{
+    width: 150px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-dark{
+    background-color: #3630A3;
+    color: white;
+    border: none;
+}
+.btn-light{
+    background-color: #807f9a;
+    color: white;
+    border: none;
+}
+.btn-outline{
+    background-color: #807f9a;
+    color: white;
+    border: 1px solid #3630A3 ;
+}
+.btn-style{
+    background:none ;
+    color: #3630A3;
+    border: 2px solid #3630A3;
+    width: 150px;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-style:hover{
+    background-color: #3630A3;
+    color: white;
+}

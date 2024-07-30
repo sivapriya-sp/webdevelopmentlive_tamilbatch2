@@ -1,0 +1,17 @@
+.flexbox{
+    background-color: steelblue;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flexbox>div{
+    background-color: aliceblue;
+    margin: 5px;
+    height: 80px;
+    width: 100px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+    flex: auto;
+
+}

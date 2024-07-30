@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>
+        HTMl Forms
+    </title>
+    <style>
+        .data {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table style="border: 2px; align-items: center; width: 500px; background-color:green;">
+            <caption><b>We Create Give Form</b></caption>
+            <tr>
+                <th>Enter first Name</th>
+                <td><input type="text" name="fn" placeholder="john" required /></td>
+            </tr>
+            <tr>
+                <th>Enter Last Name</th>
+                <td><input type="text" name="ln" placeholder="smith" required /></td>
+            </tr>
+            <tr>
+                <th>Enter Email Id</th>
+                <td><input type="email" placeholder="abcd@gmail.com" required /></td>
+            </tr>
+            <tr>
+                <th>Enter Password</th>
+                <td><input type="password" placeholder="JS12345" required /></td>
+            </tr>
+            <tr>
+                <th>Confrim Password</th>
+                <td><input type="password" placeholder="JS12345" required /></td>
+            </tr>
+            <tr>
+                <th>Enter Mobile NUmber</th>
+                <td><input type="tel" placeholder="6374598161" required /></td>
+            </tr>
+            <tr>
+                <th>Select Date of Birth</th>
+                <td><input type="date" placeholder="11-07-2024" required /></td>
+            </tr>
+            <tr>
+                <th>Enter City</th>
+                <td><input type="city" placeholder="Tamil Nadu" required /></td>
+                <!-- <label for = city >jhdgjfhgf
+                    <input type="text" id = "city name ="city" required -->
+            </tr>
+            <tr>
+                <th>Enter Address</th>
+                <td><textarea rows="3" cols="20" placeholder="Enter Address details"></textarea></td>
+            </tr>
+            <tr>
+                <th>Select Gender</th>
+                <td>male<input type="radio" name="g" /></td>
+                <td>female<input type="radio" name="g" /></td>
+            </tr>
+            <tr>
+                <th>Position for Applied</th>
+                <td>
+                    <select name="Position">
+                        <option value="" selected="selected" disabled="disabled">Select Position</option>
+                        <option value="1">Web Development </option>
+                        <option value="2">UI-UX Designer </option>
+                        <option value="3">Full Stack Development</option>
+                        <option value="4">AI/ML</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Additional skills or certificate</th>
+                <td><textarea rows="5" cols="20" placeholder="enter your master skill set"></textarea></td>
+            </tr>
+            <tr>
+                <th>Upload Resume here</th>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 20px; text-align: center;">
+                    <input type="submit" value="save details" />
+                    <input type="reset" value="reset details" />
+                </td> happy sunday
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
