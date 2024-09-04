@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 10px;
+            align-items: start;
+            justify-items: center;
+        }
+        .grid img{
+            border:  1px solid rgba(0, 0,0, 0.3);
+            box-shadow: 2px 2px 6px 0px rgba(0, 0,0, 0.3);
+            max-width: 100%;
+        }
+        /* nth - child */
+        .grid img:nth-child(6){
+            grid-column: span 5;
+        }
+    </style>
+</head>
+<body>
+  <main class="grid">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/Logo.png" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+    <img src="image/image1 (1).webp" alt="Photo">
+  </main>  
+</body>
+</html>

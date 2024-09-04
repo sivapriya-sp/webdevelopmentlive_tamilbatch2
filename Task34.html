@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            color: orangered;
+        }
+        div::after{
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width:0;
+            height: 10px;
+            background-color: blue;
+            content: "";
+            transition: width 0.2s;
+            animation: underline 10s .5s;
+        }
+        @keyframes underline{
+            from{
+                width: 0%;
+            }
+            to{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

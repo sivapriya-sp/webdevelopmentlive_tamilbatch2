@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  font-size: 1.3em;
+  padding: 0 2em 3em;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 14px;
+  text-align: center;
+}
+
+code {
+  font-family: Consolas, monospace;
+  background: #ccc;
+  padding: 1px 3px;
+}
+
+.btns {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.dir {
+  text-align: center;
+}
+
+label {
+  margin-right: 1.3em;
+  padding: 8px;
+}
+
+.container {
+  min-height: 300px;
+  border: solid 2px;
+  margin-bottom: 1em;
+  background: #b2d5ff;
+  display: flex;
+}
+
+.one .item:nth-child(1) {
+  order: 1;
+}
+
+.one .item:nth-child(2) {
+  order: 2;
+}
+
+.one .item:nth-child(3) {
+  order: 3;
+}
+
+.two .item:nth-child(1) {
+  order: 2;
+}
+
+.two .item:nth-child(2) {
+  order: 1;
+}
+
+.two .item:nth-child(3) {
+  order: 3;
+}
+
+.three .item:nth-child(1) {
+  order: 3;
+}
+
+.three .item:nth-child(2) {
+  order: 1;
+}
+
+.three .item:nth-child(3) {
+  order: 2;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.item {
+  background: #007ed3;
+  width: 33.3%;
+  min-height: 100px;
+  margin: .073em;
+  border: solid 2px #305077;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-weight: bold;
+  line-height: 1.4;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Changing the Order of Flex Items: <br><code>order</code></h2>
+        <div class="btns">
+          <label for="one">Layout 1 <input type="radio" name="order"  value="one" id="one" checked></label>
+          <label for="two">Layout 2 <input type="radio" name="order"  value="two" id="two"></label>
+           <label for="three">Layout 3 <input type="radio" name="order"  value="three" id="three"></label>
+        </div>
+          <div class="container one">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+          </div>
+        <div class="dir">
+          <label for="ltr">left-to-right <input type="radio" value="ltr" name="direction" id="ltr" checked></label>
+          <label for="rtl">right-to-left <input type="radio" value="rtl" name="direction" id="rtl"></label>
+        </div>
+      </main>
+      <script>
+        let btns = document.querySelector('.btns').querySelectorAll('input'),
+    dirs = document.querySelector('.dir').querySelectorAll('input'),
+    container = document.querySelector('.container');
+
+for (i of btns) {
+  (function(i) {
+    i.addEventListener('click', function() {
+      clearClasses(container, btns);
+      container.classList.add(i.value);
+    }, false);
+  })(i);
+}
+
+for (i of dirs) {
+  (function(i) {
+    i.addEventListener('click', function() {
+      clearClasses(container, dirs);
+      container.classList.add(i.value);
+    }, false);
+  })(i);
+}
+
+function clearClasses (el, cl) {
+  for (i of cl) {
+    el.classList.remove(i.value);
+  }
+}
+      </script>
+</body>
+</html>

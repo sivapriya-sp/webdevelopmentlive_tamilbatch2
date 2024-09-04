@@ -1,0 +1,44 @@
+<!-- transform:rotate(90deg) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.rotate{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin-right: 5px;
+    margin-left: 5px;
+    animation: roll 3s infinite;
+    transform: rotate(30deg);
+    opacity: 0.7;
+    display: inline-block;
+}
+@keyframes roll{
+    0%{
+        transform: rotate();
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+body,html{
+    height: 100%;
+}
+body{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    <div class="rotate"></div>
+    <div class="rotate"></div>
+    <div class="rotate"></div>
+</body>
+</html>

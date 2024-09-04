@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexWrap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 1.3em;
+            padding: 0 2em 3em;
+            line-height: 1.4;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        ::selection {
+            background-color: lightpink;
+        }
+
+        ::-moz-selection {
+            background-color: lightpink;
+        }
+
+        h2 {
+            margin-top: 14px;
+            text-align: center;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            background: #ccc;
+            padding: 1px 3px;
+        }
+
+        .btns {
+            padding-bottom: 1em;
+            text-align: center;
+        }
+
+        .dir {
+            text-align: center;
+        }
+
+        label {
+            margin-right: 1.3em;
+            padding: 8px;
+        }
+
+        .container {
+            border: solid 2px;
+            background: #b2d5ff;
+            display: flex;
+            margin-bottom: 1em;
+        }
+
+        .ltr {
+            direction: ltr;
+        }
+
+        .rtl {
+            direction: rtl;
+        }
+
+        .nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .item {
+            width: 15%;
+            background: #007ed3;
+            min-height: 100px;
+            border: solid 2px #305077;
+            margin: 5px;
+            text-align: center;
+            font-size: 4em;
+            color: white;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Wrapping Flex Items: <code>flex-wrap</code></h2>
+        <div class="btns">
+            <label for="nowrap">nowrap <input type="radio" name="flexwrap" value="nowrap" id="nowrap" checked></label>
+            <label for="wrap">wrap <input type="radio" name="flexwrap" value="wrap" id="wrap"></label>
+            <label for="wrap-reverse">wrap-reverse <input type="radio" name="flexwrap" value="wrap-reverse"
+                    id="wrap-reverse"></label>
+        </div>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+        </div>
+        <div class="dir">
+            <label for="ltr">left-to-right <input type="radio" value="ltr" name="direction" id="ltr" checked></label>
+            <label for="rtl">right-to-left <input type="radio" value="rtl" name="direction" id="rtl"></label>
+        </div>
+    </main>
+    <script>
+        let btns = document.querySelector('.btns').querySelectorAll('input'),
+            dirs = document.querySelector('.dir').querySelectorAll('input'),
+            container = document.querySelector('.container');
+
+        for (i of btns) {
+            (function (i) {
+                i.addEventListener('click', function () {
+                    clearClasses(container, btns);
+                    container.classList.add(i.value);
+                }, false);
+            })(i);
+        }
+
+        for (i of dirs) {
+            (function (i) {
+                i.addEventListener('click', function () {
+                    clearClasses(container, dirs);
+                    container.classList.add(i.value);
+                }, false);
+            })(i);
+        }
+
+        function clearClasses(el, cl) {
+            for (i of cl) {
+                el.classList.remove(i.value);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!-- what is 2d and 3d?
+2dimesnional x,y  - tarnsfrom property - tarnsalte ,rotate,scale,skew  - translye (x) and (y)
+3dimensional x,y,z -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: olive;
+            animation: shimmy 3s infinite;
+            animation-direction: alternate;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+        @keyframes shimmy{
+            0%{
+                transform:translate(0,0) ;
+            }
+            100%{
+                transform:translate(80px,200px) ;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="box">
+
+   </div> 
+   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, ipsum maiores id, officia nulla necessitatibus ratione fugiat expedita qui dignissimos assumenda ipsa saepe 
+    voluptatibus earum facilis ad culpa velit totam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, accusantium neque. Deleniti quod consequatur exercitationem molestias aliquam distinctio sequi sed sunt.
+         Iusto aspernatur harum quam atque nostrum, sint maxime quaerat!</p>
+</body>
+</html>

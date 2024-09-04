@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            padding: 0 20px 30px 0;
+            line-height: 1.4;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            background: #ccc;
+            padding: 1px 3px;
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        button {
+            margin: 0 auto 1em;
+        }
+
+        .container {
+            border: solid 2px;
+            background: #b2d5ff;
+            margin-bottom: 1em;
+        }
+
+        .flexcontainer {
+            display: flex;
+        }
+
+        .ltr {
+            direction: ltr;
+        }
+
+        .rtl {
+            direction: rtl;
+        }
+
+        .dir {
+            text-align: center;
+        }
+
+        label {
+            margin-right: 1.3em;
+            padding: 8px;
+        }
+
+        .item {
+            background: #007ed3;
+            min-height: 100px;
+            border: solid 2px #305077;
+            margin: 5px;
+            text-align: center;
+            font-size: 4em;
+            color: white;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Toggling a Flex Container</h2>
+        <p>The container element (light blue background) has 5 child elements.
+            Press the button to toggle it between <code>display: block</code> and <code>display: flex</code>. There are
+            no other flex-related properties applied to the elements.</p>
+        <div class="btns">
+            <button>Toggle Flex Container</button>
+        </div>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+        <div class="dir">
+            <label for="ltr">left-to-right <input type="radio" value="ltr" name="direction" id="ltr" checked></label>
+            <label for="rtl">right-to-left <input type="radio" value="rtl" name="direction" id="rtl"></label>
+        </div>
+    </main>
+    <script>
+        let container = document.querySelector('.container'),
+            dirs = document.querySelector('.dir').querySelectorAll('input');
+
+        document.querySelector('button').addEventListener('click', function () {
+            container.classList.toggle('flexcontainer');
+        }, false);
+
+        for (i of dirs) {
+            (function (i) {
+                i.addEventListener('click', function () {
+                    clearClasses(container, dirs);
+                    container.classList.add(i.value);
+                }, false);
+            })(i);
+        }
+
+        function clearClasses(el, cl) {
+            for (i of cl) {
+                el.classList.remove(i.value);
+            }
+        }
+    </script>
+</body>
+
+</html>

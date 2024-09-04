@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Card view</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr ;
+            gap:20px ;
+            align-items: stretch;
+        }
+        .grid> article{
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0,0,0, 0.3);
+        }
+        .grid> article img{
+            max-width: 50%;
+        }
+        .text{
+            padding: 0 20px 20px;
+        }
+        .text> button{
+            background: gray;
+            border: 0;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main class="grid">
+        <article>
+            <img src="image/Logo.png">
+            <div class="text">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ad illum sapiente sequi architecto. Illum sapiente eum nulla beatae aperiam odit dolorem assumenda reprehenderit, 
+                    saepe, dolor asperiores quibusdam! Architecto, dolorem.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                <button>Check This</button>
+            </div>
+        </article>
+        <article>
+            <img src="image/image1 (1).webp">
+            <div class="text">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ad illum sapiente sequi architecto. Illum sapiente eum nulla beatae aperiam odit dolorem assumenda reprehenderit, 
+                    saepe, dolor asperiores quibusdam! Architecto, dolorem.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                <button>Check This</button>
+            </div>
+        </article>
+        <article>
+            <img src="image/image1 (2).webp">
+            <div class="text">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ad illum sapiente sequi architecto. Illum sapiente eum nulla beatae aperiam odit dolorem assumenda reprehenderit, 
+                    saepe, dolor asperiores quibusdam! Architecto, dolorem.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                <button>Check This</button>
+            </div>
+        </article>
+        <article>
+            <img src="image/image1 (3).webp">
+            <div class="text">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ad illum sapiente sequi architecto. Illum sapiente eum nulla beatae aperiam odit dolorem assumenda reprehenderit, 
+                    saepe, dolor asperiores quibusdam! Architecto, dolorem.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                <button>Check This</button>
+            </div>
+        </article>
+        <article>
+            <img src="image/image1 (4).webp">
+            <div class="text">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ad illum sapiente sequi architecto. Illum sapiente eum nulla beatae aperiam odit dolorem assumenda reprehenderit, 
+                    saepe, dolor asperiores quibusdam! Architecto, dolorem.</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                <button>Check This</button>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

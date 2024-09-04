@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gird Auto Flow</title>
+    <style>
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2px;
+            animation: myAnimation 1s ease 1s 5 alternate forwards;
+        }
+
+        #grid>div {
+            background-color: tomato;
+            color: white;
+            font-size: 4vw;
+            padding: 10px;
+            width: 20vw;
+        }
+
+        #grid>div.wide {
+            width: 40vw;
+            grid-column-end: span 2;
+        }
+
+        @keyframes myAnimation {
+            100% {
+                grid-auto-flow: dense;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <div>1</div>
+        <div class="wide">2</div>
+        <div class="wide">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+
+</html>

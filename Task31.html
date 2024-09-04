@@ -1,0 +1,49 @@
+<!-- css tarnsitions ? & Animation ?
+keyframe Animation -->
+
+<!-- CSS tarnsitions
+transition-delay 
+transition-duration
+transition-property
+transition-timing-function
+-->
+<!-- CSS Animation
+keyframe - animation properties
+animation-delay
+animation-direction
+animation-fill-mode
+animation-iteration-count
+animation-name
+animation-play-state
+animation-timing-function
+animation-duration -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition:width 10s ;
+    -webkit-transition: width 10s;
+}
+div{
+    -webkit-transition-timing-function: linear;
+}
+div{
+    transition-timing-function: linear;
+}
+div:hover{
+    width: 1000px;
+}
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

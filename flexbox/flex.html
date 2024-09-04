@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  font-size: 1.3em;
+  padding: 0 2em 3em;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 14px;
+}
+
+code {
+  font-family: Consolas, monospace;
+  background: #ccc;
+  padding: 1px 3px;
+}
+
+.btns {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.dir {
+  text-align: center;
+}
+
+label {
+  margin-right: 1.3em;
+  padding: 8px;
+}
+
+.container {
+  border: solid 2px;
+  margin-bottom: 1em;
+  background: #b2d5ff;
+  display: flex;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.item {
+  width: 15%;
+  background: #007ed3;
+  min-height: 100px;
+  border: solid 2px #305077;
+  margin: 5px;
+  text-align: center;
+  font-size: 4em;
+  color: white;
+  font-weight: bold;
+  line-height: 1.4;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Determining the Direction of the Flex Container: <code>flex-direction</code></h2>
+        <div class="btns">
+          <label for="row">row <input type="radio" name="flexdirection" value="row" id="row" checked></label>
+          <label for="row-reverse">row-reverse <input type="radio" name="flexdirection"  value="row-reverse" id="row-reverse"></label>
+          <label for="column">column <input type="radio" name="flexdirection"  value="column" id="column"></label>
+          <label for="column-reverse">column-reverse <input type="radio" name="flexdirection"  value="column-reverse" id="column-reverse"></label>
+        </div>
+          <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+          </div>
+        <div class="dir">
+          <label for="ltr">left-to-right <input type="radio" value="ltr" name="direction" id="ltr" checked></label>
+          <label for="rtl">right-to-left <input type="radio" value="rtl" name="direction" id="rtl"></label>
+        </div>
+      </main>
+      <script>
+        let btns = document.querySelector('.btns').querySelectorAll('input'),
+    dirs = document.querySelector('.dir').querySelectorAll('input'),
+    container = document.querySelector('.container');
+
+for (i of btns) {
+  (function(i) {
+    i.addEventListener('click', function() {
+      clearClasses(container, btns);
+      container.classList.add(i.value);
+    }, false);
+  })(i);
+}
+
+for (i of dirs) {
+  (function(i) {
+    i.addEventListener('click', function() {
+      clearClasses(container, dirs);
+      container.classList.add(i.value);
+    }, false);
+  })(i);
+}
+
+function clearClasses (el, cl) {
+  for (i of cl) {
+    el.classList.remove(i.value);
+  }
+}
+      </script>
+</body>
+</html>

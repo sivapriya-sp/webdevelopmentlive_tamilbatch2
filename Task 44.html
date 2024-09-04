@@ -1,0 +1,52 @@
+<!-- Css Grid 
+1 fr, em ,rem,px,%,vh,vw
+1 fr - fractional unit  1 fr euql to 20px  , 8fr wll be 160px ,3 fr will be 60px
+1 fr = 25
+em - 0.5 em to 8px , 1 em to 16 px unit of measurement relative size of the  font 
+rem - stands for  root em  1 rem will equal 16px
+%
+vh- viewport height
+vw - viewport width
+px - pixel -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+       .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 5fr 2fr;
+        grid-template-rows: 5fr 20fr 5fr;
+        height: 720px;
+        gap: 10px;
+       }
+       header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+       }
+       footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+       }
+       .wrapper *{
+        background: orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1px;
+        margin-right: 1px;
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+            <header class="items">Header</header>
+            <nav class="items" >Nav</nav>
+            <div class="items contents">Contents</div>
+            <aside class="items">Aside</aside>
+            <footer class="items">Footer</footer>
+    </div>
+</body>
+</html>

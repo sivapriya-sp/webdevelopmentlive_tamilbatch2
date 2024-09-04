@@ -1,0 +1,53 @@
+<!-- Grid - designed for two dimensional layout - rows and columns at the same time.
+Flexbox - designed for layout in one dimesnional - either a rows or a  cloumns 
+        - one dimensional layout method for arranging items in rows or cloumns. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .Container {
+            display: flex;
+        }
+
+        .red {
+            background: orange;
+            flex-grow: 1;
+        }
+
+        .green {
+            background: rgb(24, 160, 137);
+        }
+
+        .blue {
+            background: steelblue;
+            width: 40vw;
+        }
+
+        .Container>div {
+            font-size: 5vw;
+            padding: .5em;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="red">1</div>
+        <div class="green">2</div>
+        <div class="blue">3
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In provident illum 
+                molestias id maiores harum eos incidunt nostrum impedit! Molestias minus earum in 
+                ratione fugit sapiente, 
+                harum nobis veritatis voluptate.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

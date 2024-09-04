@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  font-size: 1.3em;
+  padding: 0 2em 3em;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 14px;
+  text-align: center;
+}
+
+code {
+  font-family: Consolas, monospace;
+  background: #ccc;
+  padding: 1px 3px;
+}
+
+.btns {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.dir {
+  text-align: center;
+}
+
+label {
+  margin-right: 1.3em;
+  padding: 8px;
+}
+
+.container {
+  min-height: 500px;
+  border: solid 2px;
+  margin-bottom: 1em;
+  background: #b2d5ff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.one {
+  order: 1;
+}
+
+.two {
+  order: 2;
+}
+
+.three {
+  order: 3;
+}
+
+.four {
+  order: 4;
+}
+
+.five {
+  order: 5;
+}
+
+.six {
+  order: 6;
+}
+
+.seven {
+  order: 7;
+}
+
+.eight {
+  order: 8;
+}
+
+.nine {
+  order: 9;
+}
+
+.ten {
+  order: 10;
+}
+
+.eleven {
+  order: 11;
+}
+
+.twelve {
+  order: 12;
+}
+
+.item {
+  min-width: 15%;
+  background: #007ed3;
+  min-height: 100px;
+  margin: .060em;
+  border: solid 2px #305077;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.extra {
+  background: pink;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Understanding Complex Ordering: <code>order</code></h2>
+        <p>The differently-colored flex item changes its order depending on what's selected. The rest of the items have an <code>order</code> value equal to the numbers shown.</p>
+        <div class="btns">
+          <label for="one">1 <input type="radio" name="order"  value="one" id="one" checked></label>
+          <label for="two">2 <input type="radio" name="order"  value="two" id="two"></label>
+           <label for="three">3 <input type="radio" name="order"  value="three" id="three"></label>
+           <label for="four">4 <input type="radio" name="order"  value="four" id="four"></label>
+           <label for="five">5 <input type="radio" name="order"  value="five" id="five"></label>
+           <label for="six">6 <input type="radio" name="order"  value="six" id="six"></label>
+           <label for="seven">7 <input type="radio" name="order"  value="seven" id="seven"></label>
+           <label for="eight">8 <input type="radio" name="order"  value="eight" id="eight"></label>
+        </div>
+          <div class="container">
+            <div class="item one">1</div>
+            <div class="item two">2</div>
+            <div class="item three">3</div>
+            <div class="item four">4</div>
+            <div class="item five extra">5</div>
+            <div class="item six">6</div>
+            <div class="item seven">7</div>
+            <div class="item eight">8</div>
+            <div class="item nine">9</div>
+            <div class="item ten">10</div>
+            <div class="item eleven">11</div>
+            <div class="item twelve">12</div>
+          </div>
+        <div class="dir">
+          <label for="ltr">left-to-right <input type="radio" value="ltr" name="direction" id="ltr" checked></label>
+          <label for="rtl">right-to-left <input type="radio" value="rtl" name="direction" id="rtl"></label>
+        </div>
+      </main>
+      <script>
+        let btns = document.querySelector('.btns').querySelectorAll('input'),
+    dirs = document.querySelector('.dir').querySelectorAll('input'),
+    container = document.querySelector('.container'),
+    extra = document.querySelector('.extra');
+
+for (i of btns) {
+  (function(i) {
+    i.addEventListener('click', function() {
+      clearClasses(extra, btns);
+      extra.classList.add(i.value);
+    }, false);
+  })(i);
+}
+
+for (i of dirs) {
+  (function(i) {
+    i.addEventListener('click', function() {
+      clearClasses(container, dirs);
+      container.classList.add(i.value);
+    }, false);
+  })(i);
+}
+
+function clearClasses (el, cl) {
+  for (i of cl) {
+    el.classList.remove(i.value);
+  }
+}
+      </script>
+</body>
+</html>

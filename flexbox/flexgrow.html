@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  font-size: 1.3em;
+  padding: 0 2em 3em;
+  line-height: 1.4;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: 14px;
+  text-align: center;
+}
+
+code {
+  font-family: Consolas, monospace;
+  background: #ccc;
+  padding: 1px 3px;
+}
+
+.btns {
+  text-align: center;
+}
+
+.btns input {
+  width: 75px;
+  display: block;
+  margin: 12px auto 0;
+}
+
+.dir {
+  text-align: center;
+}
+
+label {
+  margin-right: 1.3em;
+  padding: 8px;
+}
+
+.container {
+  min-height: 200px;
+  border: solid 2px;
+  margin-bottom: 1em;
+  background: #b2d5ff;
+  display: flex;
+  justify-content: center;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.item {
+  width: 15%;
+  background: #007ed3;
+  border: solid 2px #305077;
+  margin: 5px;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-weight: bold;
+  line-height: 2.4;
+}
+
+.extra {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.large {
+  height: 160px;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Defining Relative Growth of Flex Items: <br><code>flex-grow</code></h2>
+        <div class="btns">
+          <label for="flexgrow">Adjust the <code>flex-grow</code> property for flex item #2:<br><input type="number" value="0" min="0" max="1" step="0.01" id="flexgrow"></label>
+        </div>
+          <div class="container">
+            <div class="item">1</div>
+            <div class="item extra">2</div>
+            <div class="item">3</div>
+          </div>
+        <div class="dir">
+          <label for="ltr">left-to-right <input type="radio" value="ltr" name="direction" id="ltr" checked></label>
+          <label for="rtl">right-to-left <input type="radio" value="rtl" name="direction" id="rtl"></label>
+        </div>
+      </main>
+      <script>
+        let input = document.querySelector('.btns').querySelector('input'),
+    dirs = document.querySelector('.dir').querySelectorAll('input'),
+    container = document.querySelector('.container'),
+    flexitem = document.querySelector('.extra');
+
+input.addEventListener('input', function() {
+  flexitem.style.flexGrow = this.value;
+}, false);
+
+for (i of dirs) {
+  (function(i) {
+    i.addEventListener('click', function() {
+      clearClasses(container, dirs);
+      container.classList.add(i.value);
+    }, false);
+  })(i);
+}
+
+function clearClasses (el, cl) {
+  for (i of cl) {
+    el.classList.remove(i.value);
+  }
+}
+      </script>
+</body>
+</html>
